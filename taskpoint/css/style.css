@@ -1,0 +1,316 @@
+/* Custom styles for TaskPoint */
+
+body {
+    background-color: #f4f5f7;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.board-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.board-card:hover {
+    background-color: #e2e6ea;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.board-card h5 {
+    color: #343a40;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.board-card p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.board-card small {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+/* Board Details Section */
+#board-detail-section {
+    background-color: #f4f5f7;
+    padding: 1rem 0;
+}
+
+#lists-container {
+    padding-bottom: 1rem;
+    /* Optional: add a subtle shadow for the scrollbar */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.list-container {
+    background-color: #ebecf0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-right: 15px;
+    min-width: 270px;
+    max-width: 270px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* For flexbox inside list container */
+    flex-direction: column; /* Stack header, cards, and buttons */
+    height: fit-content; /* Adjust height based on content */
+}
+
+.list-header {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #343a40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-header .list-actions {
+    font-size: 0.9rem;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.list-header .list-actions:hover {
+    color: #343a40;
+}
+
+.cards-in-list {
+    flex-grow: 1; /* Allows cards to take available space */
+    min-height: 20px; /* Ensures dragula can drop into empty lists */
+}
+
+.card-item {
+    background-color: #fff;
+    border-radius: 0.3rem;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 0 rgba(9, 30, 66, .25);
+    cursor: grab;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.card-item:hover {
+    background-color: #f4f5f7;
+}
+
+.card-item h6 {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+    color: #212529;
+}
+
+.card-item p small {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.card-item .card-actions {
+    margin-top: 5px;
+}
+
+.add-card-btn, .add-list-btn {
+    width: 100%;
+    text-align: left;
+    color: #6b778c;
+    border: none;
+    background: none;
+    padding: 8px 10px;
+    border-radius: 0.3rem;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.add-card-btn:hover, .add-list-btn:hover {
+    background-color: rgba(9, 30, 66, .08);
+    color: #172b4d;
+}
+
+/* Modal Styling */
+.modal-content {
+    border-radius: 0.5rem;
+}
+
+.modal-header {
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.modal-footer {
+    border-top: 1px solid #e9ecef;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* Card Details Modal Specifics */
+#cardDetailsModal .modal-body {
+    padding: 1.5rem;
+}
+
+#cardDetailsModal h4 {
+    color: #343a40;
+}
+
+#cardDetailsModal h5 {
+    color: #495057;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#card-detail-labels .badge {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+    padding: 0.5em 0.75em;
+    border-radius: 0.25rem;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.checklist-item input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.checklist-item.completed span {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.attachment-item {
+    margin-bottom: 5px;
+}
+.attachment-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+.attachment-item a:hover {
+    text-decoration: underline;
+}
+
+.comment-item {
+    background-color: #f8f9fa;
+    border-radius: 0.3rem;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+}
+
+.comment-item .comment-author {
+    font-weight: bold;
+    color: #343a40;
+}
+
+.comment-item .comment-date {
+    font-size: 0.8rem;
+    color: #999;
+    margin-left: 10px;
+}
+
+.comment-item .comment-content {
+    margin-top: 5px;
+    color: #495057;
+}
+
+
+/* Dragula styles (optional, Dragula provides default) */
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  list-style-type: none;
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.gu-transit {
+  opacity: 0.2;
+}
+
+/* Make buttons a bit more Trello-like */
+.btn {
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+.btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
